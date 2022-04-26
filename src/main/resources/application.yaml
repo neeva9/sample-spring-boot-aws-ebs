@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: h2
+
+# Exposing the various actuator endpoints just for testing purpose, this is not a good practice in prod env
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,env,beans,loggers,metrics,threaddump
